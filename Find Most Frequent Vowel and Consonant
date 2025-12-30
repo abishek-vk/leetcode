@@ -1,0 +1,10 @@
+class Solution:
+    def maxFreqSum(self, s: str) -> int:
+        c = 0
+        d=0
+        for i in s:
+            if i == 'a'or i == 'e' or i == 'i' or i=='o' or i=='u':
+                c=max(c,s.count(i))
+            else:
+                d=max(d,s.count(i))    
+        return c+d      
