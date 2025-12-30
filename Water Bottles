@@ -1,0 +1,6 @@
+class Solution:
+    def numWaterBottles(self, numBottles: int, numExchange: int) -> int:
+        if numExchange%2==0:
+            return numBottles+numExchange
+        else:
+            return numBottles+numExchange+1
