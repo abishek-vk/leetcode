@@ -1,0 +1,12 @@
+class Solution:
+    def countDigits(self, num: int) -> int:
+        a=num
+        c=0
+        while num>0:
+            s=num%10
+            
+            if s!=0 and a%s==0:
+                c+=1
+            num//=10    
+           
+        return c  
