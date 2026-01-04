@@ -1,0 +1,7 @@
+class Solution:
+    def findCenter(self, edges: List[List[int]]) -> int:
+        a = set(edges[0])
+        for i in edges[1:]:
+            a&=set(i)
+        return a.pop()  
+        
