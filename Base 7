@@ -1,0 +1,16 @@
+class Solution:
+    def convertToBase7(self, num: int) -> str:
+        if num == 0:
+            return "0"
+        n = num<0
+        num = abs(num)    
+       
+        a = ""
+        while num>0:
+            a=str(num%7) +a
+            num//=7
+        if n:
+            return "-"+a    
+
+        return a
+            
