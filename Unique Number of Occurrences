@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Solution {
+    public boolean uniqueOccurrences(int[] arr) {
+       
+        HashMap<Integer, Integer> freq = new HashMap<>();
+        for (int num : arr) {
+            freq.put(num, freq.getOrDefault(num, 0) + 1);
+        }
+
+       
+        List<Integer> counts = new ArrayList<>(freq.values());
+
+        
+        for (int i = 0; i < counts.size(); i++) {
+            for (int j = i + 1; j < counts.size(); j++) {
+                if (counts.get(i).equals(counts.get(j))) {
+                    return false; 
+                }
+            }
+        }
+
+        return true; 
+    }}
